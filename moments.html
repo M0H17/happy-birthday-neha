@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#f7b8a8" />
+  <title>Our Moments · Happy Birthday Neha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="moments" class="mobile-app">
+  <div class="ambient" aria-hidden="true">
+    <span class="blob blob-a"></span>
+    <span class="blob blob-b"></span>
+    <span class="blob blob-c"></span>
+  </div>
+
+  <header class="site-header">
+    <a class="site-logo" href="index.html" data-site-logo>For Neha</a>
+  </header>
+
+  <main class="app-main">
+    <section class="moments moments-swipe page-section">
+      <div class="ribbon-banner ribbon-banner-sm">
+        <img data-decor="ribbon" src="images/ribbon.jpg" alt="" />
+      </div>
+
+      <header class="section-head">
+        <h2>Our moments</h2>
+        <p>Neha, swipe through a few frames from our story.</p>
+      </header>
+
+      <p class="swipe-counter" id="swipe-counter">1 / 6</p>
+
+      <div class="swipe-stage" id="swipe-stage" aria-label="Photo cards">
+        <div class="swipe-deck" id="swipe-deck"></div>
+        <p class="swipe-empty" id="swipe-empty" hidden>
+          That’s all for now, Neha.
+        </p>
+      </div>
+
+      <div class="swipe-hint" id="swipe-hint" aria-hidden="true">
+        <span>← skip</span>
+        <span>keep →</span>
+      </div>
+
+      <div class="swipe-actions">
+        <button type="button" class="swipe-btn swipe-btn-left" id="btn-swipe-left" aria-label="Swipe left">
+          ←
+        </button>
+        <button type="button" class="swipe-btn swipe-btn-right" id="btn-swipe-right" aria-label="Swipe right">
+          →
+        </button>
+      </div>
+
+      <div class="page-actions" id="moments-done" hidden>
+        <a class="btn btn-primary" href="quiz.html">Continue to heart check</a>
+        <button type="button" class="btn btn-ghost" id="btn-reshuffle">See them again</button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Main">
+    <a href="index.html" data-nav="home">
+      <span class="nav-icon" aria-hidden="true">⌂</span>
+      <span>Home</span>
+    </a>
+    <a href="about.html" data-nav="about">
+      <span class="nav-icon" aria-hidden="true">✿</span>
+      <span>About</span>
+    </a>
+    <a href="moments.html" data-nav="moments">
+      <span class="nav-icon" aria-hidden="true">♡</span>
+      <span>Moments</span>
+    </a>
+    <a href="quiz.html" data-nav="quiz">
+      <span class="nav-icon" aria-hidden="true">?</span>
+      <span>Hearts</span>
+    </a>
+    <a href="finale.html" data-nav="finale">
+      <span class="nav-icon" aria-hidden="true">✦</span>
+      <span>Finale</span>
+    </a>
+  </nav>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="gate.js"></script>
+  <script src="moments.js"></script>
+</body>
+</html>

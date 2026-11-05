@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#f7b8a8" />
+  <title>Happy Birthday Neha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home" class="mobile-app is-locked">
+  <div class="ambient" aria-hidden="true">
+    <span class="blob blob-a"></span>
+    <span class="blob blob-b"></span>
+    <span class="blob blob-c"></span>
+  </div>
+
+  <!-- Passcode gate + unlock ceremony -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="curtain-pair" aria-hidden="true">
+      <div class="curtain curtain-left">
+        <span class="curtain-fold"></span>
+        <span class="curtain-fold"></span>
+        <span class="curtain-fold"></span>
+        <span class="curtain-tie"></span>
+      </div>
+      <div class="curtain curtain-right">
+        <span class="curtain-fold"></span>
+        <span class="curtain-fold"></span>
+        <span class="curtain-fold"></span>
+        <span class="curtain-tie"></span>
+      </div>
+      <div class="curtain-rod"></div>
+    </div>
+
+    <div class="gate-panel" id="gate-panel">
+      <div class="gate-lock" aria-hidden="true">
+        <span class="gate-lock-body"></span>
+        <span class="gate-lock-shackle"></span>
+      </div>
+      <p class="gate-kicker">Private entrance</p>
+      <h1 class="gate-title" id="gate-title">Enter the passcode</h1>
+      <p class="gate-hint" id="gate-hint"></p>
+      <div class="gate-display" id="gate-display" aria-live="polite"></div>
+      <p class="gate-status" id="gate-status" aria-live="assertive"></p>
+
+      <div class="gate-keypad" id="gate-keypad">
+        <button type="button" data-key="1">1</button>
+        <button type="button" data-key="2">2</button>
+        <button type="button" data-key="3">3</button>
+        <button type="button" data-key="4">4</button>
+        <button type="button" data-key="5">5</button>
+        <button type="button" data-key="6">6</button>
+        <button type="button" data-key="7">7</button>
+        <button type="button" data-key="8">8</button>
+        <button type="button" data-key="9">9</button>
+        <button type="button" data-key="clear" class="gate-key-wide">Clear</button>
+        <button type="button" data-key="0">0</button>
+        <button type="button" data-key="enter" class="gate-key-enter">Go</button>
+      </div>
+    </div>
+
+    <!-- Wrong passcode flash -->
+    <div class="ceremony-flash bubu-flash" id="bubu-flash" hidden>
+      <img id="bubu-image" src="images/bubu-try-again.jpg" alt="Bubu" />
+      <p>Try again</p>
+    </div>
+
+    <!-- Age 29 → 30 (timer-style increment) -->
+    <div class="ceremony-flash age-flash" id="age-flash" hidden>
+      <div class="age-timer" aria-live="polite">
+        <div class="age-ring" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <circle class="age-ring-track" cx="60" cy="60" r="52" />
+            <circle class="age-ring-progress" cx="60" cy="60" r="52" />
+          </svg>
+        </div>
+        <div class="age-timer-core">
+          <p class="age-label">Neha turns</p>
+          <p class="age-number" id="age-number">29</p>
+          <p class="age-sub">years young</p>
+        </div>
+        <p class="age-step-hint" id="age-step-hint">29 → 30</p>
+      </div>
+    </div>
+
+    <!-- Happy Birthday flash -->
+    <div class="ceremony-flash bday-flash" id="bday-flash" hidden>
+      <div class="bday-stage">
+        <div class="bday-sparkles" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <p class="bday-kicker">It’s your day</p>
+        <p class="bday-flash-text">
+          <span>Happy</span>
+          <span>Birthday</span>
+        </p>
+        <p class="bday-flash-name" data-insert-name>Neha</p>
+        <p class="bday-wish">With all my love</p>
+        <div class="bday-mascots" aria-hidden="true">
+          <img src="images/bubu-wave.gif" alt="" />
+          <img src="images/dudu-wave.gif" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Cake cutting -->
+    <div class="ceremony-stage cake-cut-stage" id="cake-cut-stage" hidden>
+      <div class="cake-cut-area" id="cake-cut-area">
+        <img class="cut-cake" id="cut-cake" src="images/cake.jpg" alt="Birthday cake" />
+        <div class="cut-line" id="cut-line" aria-hidden="true"></div>
+        <img class="cut-knife" id="cut-knife" src="images/cake-knife.jpg" alt="Knife" />
+        <div class="swipe-hint" id="swipe-hint-anim" aria-hidden="true">
+          <span class="swipe-hand"></span>
+        </div>
+        <img
+          class="serve-slice"
+          id="serve-slice"
+          src="images/cake-slice.jpg"
+          alt="Cake slice"
+          hidden
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="site-shell" id="site-shell">
+    <header class="site-header">
+      <a class="site-logo" href="index.html" data-site-logo>For Neha</a>
+    </header>
+
+    <main class="app-main">
+      <section class="hero" id="hero">
+        <div class="ribbon-banner">
+          <img data-decor="ribbon" src="images/ribbon.jpg" alt="" />
+        </div>
+
+        <div class="hero-copy">
+          <p class="brand">Happy Birthday</p>
+          <h1 id="hero-name" data-insert-name>Neha</h1>
+          <p class="hero-line">Neha, a little interactive surprise made just for your birthday.</p>
+        </div>
+
+        <div class="gift-flip" id="gift-flip">
+          <div class="gift-flip-inner">
+            <div class="gift-face gift-face-front">
+              <img data-decor="party" src="images/party-decor.jpg" alt="Birthday gift for Neha" />
+              <button type="button" class="btn btn-primary gift-open-btn" id="gift-open-btn">
+                Open me
+              </button>
+            </div>
+            <div class="gift-face gift-face-back" id="gift-back">
+              <img
+                id="reveal-cake"
+                class="reveal-layer reveal-cake"
+                data-decor="cake"
+                src="images/cake.jpg"
+                alt="Birthday cake"
+              />
+              <img
+                id="hero-image"
+                class="reveal-layer reveal-photo"
+                src="images/hero.jpg"
+                alt="Birthday portrait of Neha"
+              />
+            </div>
+          </div>
+          <div class="hero-frame" aria-hidden="true"></div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="about.html">About Neha</a>
+          <a class="btn btn-ghost" href="moments.html">See our moments</a>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <nav class="bottom-nav" aria-label="Main">
+    <a href="index.html" data-nav="home">
+      <span class="nav-icon" aria-hidden="true">⌂</span>
+      <span>Home</span>
+    </a>
+    <a href="about.html" data-nav="about">
+      <span class="nav-icon" aria-hidden="true">✿</span>
+      <span>About</span>
+    </a>
+    <a href="moments.html" data-nav="moments">
+      <span class="nav-icon" aria-hidden="true">♡</span>
+      <span>Moments</span>
+    </a>
+    <a href="quiz.html" data-nav="quiz">
+      <span class="nav-icon" aria-hidden="true">?</span>
+      <span>Hearts</span>
+    </a>
+    <a href="finale.html" data-nav="finale">
+      <span class="nav-icon" aria-hidden="true">✦</span>
+      <span>Finale</span>
+    </a>
+  </nav>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="gate.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

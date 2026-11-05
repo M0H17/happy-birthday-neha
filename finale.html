@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#f7b8a8" />
+  <title>For Neha · Happy Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="finale" class="mobile-app">
+  <div class="ambient" aria-hidden="true">
+    <span class="blob blob-a"></span>
+    <span class="blob blob-b"></span>
+    <span class="blob blob-c"></span>
+  </div>
+
+  <header class="site-header">
+    <a class="site-logo" href="index.html" data-site-logo>For Neha</a>
+  </header>
+
+  <main class="app-main">
+    <section class="finale page-section">
+      <div class="ribbon-banner">
+        <img data-decor="ribbon" src="images/ribbon.jpg" alt="" />
+      </div>
+
+      <div class="finale-inner">
+        <p class="brand">For <span data-insert-name>Neha</span></p>
+        <h2 id="finale-title">Happy Birthday, Neha.</h2>
+        <p id="finale-message"></p>
+
+        <img id="finale-image" class="finale-image" src="images/finale.jpg" alt="Celebration with Neha" />
+
+        <div class="page-actions centered">
+          <button type="button" class="btn btn-primary" id="btn-restart">Play again</button>
+          <a class="btn btn-ghost" href="index.html">Back home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Main">
+    <a href="index.html" data-nav="home">
+      <span class="nav-icon" aria-hidden="true">⌂</span>
+      <span>Home</span>
+    </a>
+    <a href="about.html" data-nav="about">
+      <span class="nav-icon" aria-hidden="true">✿</span>
+      <span>About</span>
+    </a>
+    <a href="moments.html" data-nav="moments">
+      <span class="nav-icon" aria-hidden="true">♡</span>
+      <span>Moments</span>
+    </a>
+    <a href="quiz.html" data-nav="quiz">
+      <span class="nav-icon" aria-hidden="true">?</span>
+      <span>Hearts</span>
+    </a>
+    <a href="finale.html" data-nav="finale">
+      <span class="nav-icon" aria-hidden="true">✦</span>
+      <span>Finale</span>
+    </a>
+  </nav>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="gate.js"></script>
+  <script src="finale.js"></script>
+</body>
+</html>
