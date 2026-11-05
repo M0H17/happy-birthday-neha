@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#f7b8a8" />
+  <title>Heart Check · Happy Birthday Neha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="quiz" class="mobile-app">
+  <div class="ambient" aria-hidden="true">
+    <span class="blob blob-a"></span>
+    <span class="blob blob-b"></span>
+    <span class="blob blob-c"></span>
+  </div>
+
+  <header class="site-header">
+    <a class="site-logo" href="index.html" data-site-logo>For Neha</a>
+  </header>
+
+  <main class="app-main">
+    <section class="quiz page-section">
+      <div class="quiz-decor-row" aria-hidden="true">
+        <img class="quiz-cake" data-decor="cake" src="images/cake.jpg" alt="" />
+        <img class="quiz-party" data-decor="party" src="images/party-decor.jpg" alt="" />
+      </div>
+
+      <header class="section-head">
+        <h2>Heart check</h2>
+        <p>For Neha — answer honestly. Or don’t. I’ll know either way.</p>
+      </header>
+
+      <div class="progress" aria-hidden="true">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <p class="progress-label" id="progress-label">Heart 1 of 10</p>
+
+      <article class="question-card" id="question-panel">
+        <p class="question-kicker" id="question-kicker">Heart 1</p>
+        <h3 id="question-text">Loading…</h3>
+        <div class="answer-row">
+          <button type="button" class="btn btn-yes" id="btn-yes">Yes</button>
+          <button type="button" class="btn btn-no" id="btn-no">No</button>
+        </div>
+        <p class="reaction" id="reaction" hidden></p>
+      </article>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Main">
+    <a href="index.html" data-nav="home">
+      <span class="nav-icon" aria-hidden="true">⌂</span>
+      <span>Home</span>
+    </a>
+    <a href="about.html" data-nav="about">
+      <span class="nav-icon" aria-hidden="true">✿</span>
+      <span>About</span>
+    </a>
+    <a href="moments.html" data-nav="moments">
+      <span class="nav-icon" aria-hidden="true">♡</span>
+      <span>Moments</span>
+    </a>
+    <a href="quiz.html" data-nav="quiz">
+      <span class="nav-icon" aria-hidden="true">?</span>
+      <span>Hearts</span>
+    </a>
+    <a href="finale.html" data-nav="finale">
+      <span class="nav-icon" aria-hidden="true">✦</span>
+      <span>Finale</span>
+    </a>
+  </nav>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="gate.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>
